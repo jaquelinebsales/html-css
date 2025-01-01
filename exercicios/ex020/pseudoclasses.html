@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses</title>
+    <style>
+        div > p{
+            display: none;
+        }
+        div:hover{
+            color: red;
+        }
+        div:hover > p{
+            /* o hover é utilizado para quando o mouse passa por cima do elemento configurado*/
+            display: block;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudoclasses</h1>
+    <p>Pseudoclasses são correspondentes ao estado de tale lemento.</p>
+    <div>
+        passe o mouse por cima deste texto.
+        <p>texto escondido lol</p>
+    </div>
+    <p>fim do exemplo</p>
+</body>
+</html>

@@ -51,16 +51,36 @@
             box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.459);
         }
 
+        main p{
+            text-align: justify;
+        }
+
         table{
             width: 900px;
             border-collapse: collapse;
             margin: auto;
             border: 2px solid black;
+            position: relative;
+            margin: 20px;
+        }
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: var(--amarelo);
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: rgb(213, 238, 247);
         }
 
         td{
             border: 1px solid black;
             padding: 5px;
+        }
+
+        td.num{
+            text-align: right;
         }
 
         th{
@@ -69,6 +89,16 @@
             background-color: var(--amarelo);
         }
 
+        tfoot tr td{
+            text-align: center;
+        }
+        /*FOOTER*/
+
+        footer{
+            background-color: var(--amarelo);
+            text-align: center;
+            padding: 5px;
+        }
 
     </style>
 </head>
@@ -80,94 +110,112 @@
     </header>
     <main>
         <table>
+            <caption>População das unidades federativas</caption>
             <thead>
                 <tr>
                     <th>N°</th>
-                    <th>Unidade Federativa</th>
-                    <th>População</th>
-                    <th>Mudança</th>
-                    <th>País comparável</th>
+                    <th scope="col">Unidade Federativa</th>
+                    <th scope="col">População</th>
+                    <th  scope="col">Mudança</th>
+                    <th scope="col">País comparável</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/20px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png" alt="Bandeira São Paulo"> São Paulo</td>
-                    <td>45 973 190</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/20px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png" alt="Bandeira São Paulo"> <a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo">São Paulo</a></td>
+                    <td class="num">45 973 190</td>
                     <td class="mudanca">+11,36%</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/22px-Flag_of_Argentina.svg.png" alt="Bandeira da Argentina"> Argentina (46 621 847)</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/22px-Flag_of_Argentina.svg.png" alt="Bandeira da Argentina"><a href="https://pt.wikipedia.org/wiki/Argentina"> Argentina</a> (46 621 847)</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/20px-Bandeira_de_Minas_Gerais.svg.png" alt="Banderia de Minas Gerais"> Minas Gerais</td>
-                    <td>21 322 692</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/20px-Bandeira_de_Minas_Gerais.svg.png" alt="Banderia de Minas Gerais"> <a href="https://pt.wikipedia.org/wiki/Minas_Gerais">Minas Gerais</a></td>
+                    <td class="num">21 322 692</td>
                     <td class="mudanca">+8,80%</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/22px-Flag_of_Burkina_Faso.svg.png" alt="Bandeira da Burquina Fasso"> Burquina Fasso (20 903 273)</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/22px-Flag_of_Burkina_Faso.svg.png" alt="Bandeira da Burquina Fasso"> <a href="https://pt.wikipedia.org/wiki/Burquina_Fasso"> Burquina Fasso</a> (20 903 273)</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/20px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png" alt="Bandeira de Rio de Janeiro"> Rio de Janeiro</td>
-                    <td>17 219 679</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/20px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png" alt="Bandeira de Rio de Janeiro"><a href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro"> Rio de Janeiro</a></td>
+                    <td class="num">17 219 679</td>
                     <td class="mudanca">+7,69%</td>
-                    <td><img src="https://pt.wikipedia.org/wiki/Camboja" alt="Bandeira da Camboja"> Camboja (16 718 965)</td>
+                    <td><img src="https://pt.wikipedia.org/wiki/Camboja" alt="Bandeira da Camboja"> <a href="https://pt.wikipedia.org/wiki/Camboja">Camboja</a> (16 718 965)</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td><img src="https://pt.wikipedia.org/wiki/Bahia" alt="Banderia da Bahia"> Bahia</td>
-                    <td>14 850 513</td>
+                    <td><img src="https://pt.wikipedia.org/wiki/Bahia" alt="Banderia da Bahia"><a href="https://pt.wikipedia.org/wiki/Bahia"> Bahia</a></td>
+                    <td class="num">14 850 513</td>
                     <td class="mudanca">+5,97%</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/22px-Flag_of_Zimbabwe.svg.png" alt="Banderia do Zimbabwe"> Zimbabwe (14 862 924)</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/22px-Flag_of_Zimbabwe.svg.png" alt="Banderia do Zimbabwe"> <a href="https://pt.wikipedia.org/wiki/Zimbabwe"> Zimbabwe</a> (14 862 924)</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/20px-Bandeira_do_Paran%C3%A1.svg.png" alt="Bandeira de Paraná"> Paraná</td>
-                    <td>11 824 665</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/20px-Bandeira_do_Paran%C3%A1.svg.png" alt="Bandeira de Paraná"><a href="https://pt.wikipedia.org/wiki/Paran%C3%A1"> Paraná</a></td>
+                    <td class="num">11 824 665</td>
                     <td class="mudanca">+13,21%</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/22px-Flag_of_Tunisia.svg.png" alt="Bandeira da Tunísia"> Tunísia (11 818 619)</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/22px-Flag_of_Tunisia.svg.png" alt="Bandeira da Tunísia"><a href="https://pt.wikipedia.org/wiki/Tun%C3%ADsia"> Tunísia</a> (11 818 619)</td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bandeira_do_Rio_Grande_do_Sul.svg/20px-Bandeira_do_Rio_Grande_do_Sul.svg.png" alt="Banderia Rio Grande do Sul"> Rio Grande do Sul</td>
-                    <td>11 229 915</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bandeira_do_Rio_Grande_do_Sul.svg/20px-Bandeira_do_Rio_Grande_do_Sul.svg.png" alt="Banderia Rio Grande do Sul"><a href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Sul"> Rio Grande do Sul</a></td>
+                    <td class="num">11 229 915</td>
                     <td class="mudanca">+5,01%</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/22px-Flag_of_Portugal.svg.png" alt="Banderia de Portugal"> Portugal (10 343 066)</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/22px-Flag_of_Portugal.svg.png" alt="Banderia de Portugal"><a href="https://pt.wikipedia.org/wiki/Portugal"> Portugal</a> (10 343 066)</td>
                 </tr>
                 <tr>
                     <td>7</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/20px-Bandeira_de_Pernambuco.svg.png" alt="Banderia de Pernambuco"> Pernambuco</td>
-                    <td>9 539 029</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/20px-Bandeira_de_Pernambuco.svg.png" alt="Banderia de Pernambuco"> <a href="https://pt.wikipedia.org/wiki/Pernambuco"> Pernambuco</a></td>
+                    <td class="num">9 539 029</td>
                     <td class="mudanca">+8,46%</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/22px-Flag_of_Austria.svg.png" alt="Bandeira da Áustria"> Áustria (9 006 398)</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/22px-Flag_of_Austria.svg.png" alt="Bandeira da Áustria"><a href="https://pt.wikipedia.org/wiki/%C3%81ustria"> Áustria </a>(9 006 398)</td>
                 </tr>
                 <tr>
                     <td>8</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bandeira_do_Cear%C3%A1.svg/20px-Bandeira_do_Cear%C3%A1.svg.png" alt="Bandeira de Ceará"> Ceará</td>
-                    <td>9 233 656</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bandeira_do_Cear%C3%A1.svg/20px-Bandeira_do_Cear%C3%A1.svg.png" alt="Bandeira de Ceará"> <a href="https://pt.wikipedia.org/wiki/Cear%C3%A1">Ceará</a></td>
+                    <td class="num">9 233 656</td>
                     <td class="mudanca">+9,27%</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/20px-Flag_of_Papua_New_Guinea.svg.png" alt="Bandeira de Papua- Nova Guiné">Papua-Nova Guiné (8 947 024)</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/20px-Flag_of_Papua_New_Guinea.svg.png" alt="Bandeira de Papua- Nova Guiné"><a href="https://pt.wikipedia.org/wiki/Papua-Nova_Guin%C3%A9"> Papua-Nova Guiné</a> (8 947 024)</td>
                 </tr>
                 <tr>
                     <td>9</td>
-                    <td><img src="https://pt.wikipedia.org/wiki/Par%C3%A1" alt="Bandeira do Pará"> Pará</td>
-                    <td>8 664 306</td>
+                    <td><img src="https://pt.wikipedia.org/wiki/Par%C3%A1" alt="Bandeira do Pará"><a href="https://pt.wikipedia.org/wiki/Par%C3%A1"> Pará</a></td>
+                    <td  class="num">8 664 306</td>
                     <td class="mudanca">+14,28%</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/16px-Flag_of_Switzerland.svg.png" alt="Bandeira da Suíça"> Suíça (8 654 622)</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/16px-Flag_of_Switzerland.svg.png" alt="Bandeira da Suíça"><a href="https://pt.wikipedia.org/wiki/Su%C3%AD%C3%A7a">  Suíça</a> (8 654 622)</td>
                 </tr>
                 <tr>
                     <td>10</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bandeira_de_Santa_Catarina.svg/20px-Bandeira_de_Santa_Catarina.svg.png" alt="Bandeira de Santa Catarina"> Santa Cantarina</td>
-                    <td>8 058 447</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bandeira_de_Santa_Catarina.svg/20px-Bandeira_de_Santa_Catarina.svg.png" alt="Bandeira de Santa Catarina"> <a href="https://pt.wikipedia.org/wiki/Santa_Catarina"> Santa Cantarina</a></td>
+                    <td class="num">8 058 447</td>
                     <td class="mudanca">+28,94%</td>
-                    <td><img src="https://pt.wikipedia.org/wiki/Laos" alt="Bandeira de Laos"> Laos (7 749 595)</td>
+                    <td><img src="https://pt.wikipedia.org/wiki/Laos" alt="Bandeira de Laos"><a href="https://pt.wikipedia.org/wiki/Laos"> Laos</a> (7 749 595)</td>
                 </tr>
             </tbody>
             <tfoot>
-
+                <tr>
+                    <th>Total</th  scope="row">
+                    <td colspan="4">
+                        <strong>111.988.874</strong>
+                    </td>
+                </tr>
             </tfoot>
         </table>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut adipisci et error quis esse itaque, libero sint cumque? Dolorem, ullam! Iste libero error nostrum quidem iure facilis veniam doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, dignissimos, saepe laborum cupiditate asperiores esse quas omnis vel adipisci fuga ad iusto ducimus, veniam rem maxime mollitia corporis quod unde!lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis modi obcaecati amet quis temporibus fuga, ratione saepe alias reprehenderit ipsam eligendi ipsum voluptates culpa ea, illum rerum quas, ad corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci pariatur delectus debitis, nostrum quam laborum doloremque, nemo expedita atque ex animi consectetur aperiam hic molestias repellendus assumenda sint maiores ratione!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut adipisci et error quis esse itaque, libero sint cumque? Dolorem, ullam! Iste libero error nostrum quidem iure facilis veniam doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, dignissimos, saepe laborum cupiditate asperiores esse quas omnis vel adipisci fuga ad iusto ducimus, veniam rem maxime mollitia corporis quod unde!lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis modi obcaecati amet quis temporibus fuga, ratione saepe alias reprehenderit ipsam eligendi ipsum voluptates culpa ea, illum rerum quas, ad corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci pariatur delectus debitis, nostrum quam laborum doloremque, nemo expedita atque ex animi consectetur aperiam hic molestias repellendus assumenda sint maiores ratione!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut adipisci et error quis esse itaque, libero sint cumque? Dolorem, ullam! Iste libero error nostrum quidem iure facilis veniam doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, dignissimos, saepe laborum cupiditate asperiores esse quas omnis vel adipisci fuga ad iusto ducimus, veniam rem maxime mollitia corporis quod unde!lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis modi obcaecati amet quis temporibus fuga, ratione saepe alias reprehenderit ipsam eligendi ipsum voluptates culpa ea, illum rerum quas, ad corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci pariatur delectus debitis, nostrum quam laborum doloremque, nemo expedita atque ex animi consectetur aperiam hic molestias repellendus assumenda sint maiores ratione!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut adipisci et error quis esse itaque, libero sint cumque? Dolorem, ullam! Iste libero error nostrum quidem iure facilis veniam doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, dignissimos, saepe laborum cupiditate asperiores esse quas omnis vel adipisci fuga ad iusto ducimus, veniam rem maxime mollitia corporis quod unde!lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis modi obcaecati amet quis temporibus fuga, ratione saepe alias reprehenderit ipsam eligendi ipsum voluptates culpa ea, illum rerum quas, ad corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci pariatur delectus debitis, nostrum quam laborum doloremque, nemo expedita atque ex animi consectetur aperiam hic molestias repellendus assumenda sint maiores ratione!
+        </p>
     </main>
     <footer>
-
+        <p>Site criado por Jaqueline Sales para o Curso em Video</p>
     </footer>
 </body>
 </html>

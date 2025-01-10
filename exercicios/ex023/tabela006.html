@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas reponsivas</title>
+    <style>
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            border-collapse: collapse;
+            width: 200px;
+            padding: 5px;
+        }
+        caption{
+            font-weight: bolder;
+            font-size: 1.2em;
+            padding: 20px;
+        }
+        td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        tbody > tr > td:nth-child(2n){
+            background-color: lightgray;
+        }
+        .tabela-responsiva{
+            overflow-x: auto;
+            margin: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas em telas pequenas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita eius architecto quas? Vitae harum iusto, sapiente impedit dolorem repellendus earum, expedita natus odio sequi nostrum doloremque placeat tempore illum.</p>
+    <div class="tabela-responsiva">
+        <table>
+            <caption>Tabelas reponsivas</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Produto A</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>8</td>
+                    <td>15</td>
+                    <td>20</td>
+                    <td>18</td>
+                    <td>14</td>
+                    <td>17</td>
+                    <td>22</td>
+                    <td>19</td>
+                    <td>23</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Produto B</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>11</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>14</td>
+                    <td>13</td>
+                    <td>11</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Produto C</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>9</td>
+                    <td>7</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Produto D</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>9</td>
+                    <td>7</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Produto E</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>9</td>
+                    <td>7</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

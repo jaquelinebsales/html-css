@@ -7,7 +7,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(45deg, rgb(88, 80, 133), rgb(0, 0, 0));
+    background-image: linear-gradient(45deg, rgb(22, 40, 90), rgb(0, 0, 0));
     height: 100vh;
 }
 
@@ -19,8 +19,8 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    height: 60%;
-    width: 80%;
+    height: 80vh;
+    width: 80vw;
 }
 
 .img{
@@ -32,6 +32,7 @@ body{
     padding: 80px 50px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    width: 50vw;
 }
 
 .img a{
@@ -57,33 +58,67 @@ form{
     display: flex;
     flex-direction: column;
     padding: 30px;
+    max-height: 100%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
 }
 
 h2{
     text-align: center;
-    margin-bottom: 15px;
+    margin: 10px;
+    font-size: 2em;
 }
 
 form a,input{
-    margin-bottom: 15px;
+    margin: 8px 5px;
     background-color: transparent;
     border: 1px solid rgb(73, 73, 73);
     border-radius: 5px;
-    padding: 5px 8px;
+    padding: 8px;
+    width: 100%;
 }
 
 .dark-button{
     background-color: black;
     color: white;
+    width: 100%;
+    align-items: center;
 }
 
 a img{
-    width: 12px;
+    width: 1rem;
 }
 
 form a{
     text-decoration: none;
     text-align: center;
-    width: 90%;
 }
- 
+
+form div.or {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+div.line{
+    height: 1px;
+    width: 100%;
+    background-color: black
+}
+
+form div.or p{
+    margin: 0px 5px;
+    font-size: 0.7em;
+}
+
+form label{
+    font-size: 0.7em;
+    margin-left: 5px;
+    text-align: center;
+}
+
+
+

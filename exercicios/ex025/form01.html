@@ -12,15 +12,21 @@
             <h1>Meu primeiro formulário</h1>
             <p>estudo de formulário com o <a href="https://youtube.com/cursoemvideo/">Curso em Vídeo</a>.</p>
         </section>
-        <form action="">
+        <form action="cadastro.php" autocomplete="off" method="post">
             <h2>Titulo</h2>
+            <label for="nome">Seu nome:</label>
+            <input type="text" placeholder="Nome" id="nome">
+
+            <label for="sobrenome">Seu sobrenome:</label>
+            <input type="text" placeholder="Sobrenome" id="sobrenome" required>
+
             <input type="text" placeholder="exemple">
+
             <input type="text" placeholder="exemple">
-            <input type="text" placeholder="exemple">
-            <input type="text" placeholder="exemple">
-            <p>Lorem ipsum dolor</p>
-            <input type="button" value="Example" class="dark-button">
-            <div>
+
+            <label>Lorem ipsum dolor</label>
+            <input type="submit" value="Example" class="dark-button">
+            <div class="or">
                 <div class="line"></div>
                 <p>or</p>
                 <div class="line"></div>

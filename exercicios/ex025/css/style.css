@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, rgb(88, 80, 133), rgb(0, 0, 0));
+    height: 100vh;
+}
+
+.form-img-group{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 60%;
+    width: 80%;
+}
+
+.img{
+    background-image: url('https://images.pexels.com/photos/5326216/pexels-photo-5326216.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    padding: 80px 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.img a{
+    color: white;
+    text-decoration: none;
+}
+
+.img a:hover{
+    text-decoration: underline;
+}
+
+.img h1{
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.img h1, .img p{
+    text-shadow: 3px 3px 10px black;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form a,input{
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 1px solid rgb(73, 73, 73);
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+.dark-button{
+    background-color: black;
+    color: white;
+}
+
+a img{
+    width: 12px;
+}
+
+form a{
+    text-decoration: none;
+    text-align: center;
+    width: 90%;
+}
+ 

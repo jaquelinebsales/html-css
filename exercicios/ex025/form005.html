@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 004</title>
+    <link rel="stylesheet" href="css/style02.css">
+</head>
+<body>
+    <div class="container__title">
+        <h1>Exemplo de formulário</h1>
+    </div>
+    <section class="container__form">
+        <form action="#" method="get" autocomplete="on">
+            <fieldset>
+                <legend>Esportes</legend>
+                <div class="form__content">
+                    <input type="checkbox" id="ifult" autocomplete="fult" required> <label for="ifult">Fultebol</label>
+                </div>
+                <div class="form__content">
+                    <label for="iemail">Email:</label>
+                    <input type="email" id="iemail" autocomplete="email" required>
+                </div>
+                <div class="form__content">
+                    <label for="itel">Telefone:</label>
+                    <input type="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
+                </div>
+                <div class="form__button">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
